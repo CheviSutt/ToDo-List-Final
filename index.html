@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In Class To Do List</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="ahh.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="toDo.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="headbar">
+            <div class="left">
+                Chevi Sutton
+            </div>
+
+            <div class="right">
+                Right side
+            </div>
+        </div>
+
+
+        <div class="main">
+            <div class="header">
+                <div class="headleft">
+                    <input type="text" id="myInput" placeholder="Start a New List...">
+                To Do List
+                </div>
+
+                <div class="headright">
+                    <!--<a onclick="addList()" class="bluebtn">Add List</a>-->
+                    <a class="bluebtn" onclick="newElement()">Add List</a>
+
+                </div>
+
+            </div>
+            <div  class="list">
+                <div id="newList" class="todolist">
+                    <input type="text" id="listItem" placeholder="Add Item...">
+                    <span class="listlabel">List Label</span>
+                </div>
+            </div>
+        </div>
+
+    <!--<div class="container">-->
+
+        <div class="row">
+            <div class="rowleft">
+                <div class="iconspot fa"></div>
+                <div class="label">Feed the Dog</div>
+            </div>
+            <div class="rowright">
+                <button onclick="markComplete(this)">Mark Complete</button>
+                <div class="fa fa-trash" onclick="removeRow(this)"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="rowleft">
+                <div class="iconspot fa"></div>
+                <div class="label">Buy some Milk</div>
+            </div>
+            <div class="rowright">
+                <button onclick="markComplete(this)">Mark Complete</button>
+                <div class="fa fa-trash" onclick="removeRow(this)"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="rowleft">
+                <div class="iconspot fa"></div>
+                <div class="label">Take out the Trash</div>
+            </div>
+            <div class="rowright">
+                <button onclick="markComplete(this)">Mark Complete</button>
+                <div class="fa fa-trash" onclick="removeRow(this)"></div>
+            </div>
+        </div>
+        <div class="list2">
+            <div id="newList2" class="todolist2" >
+            <!--<span class="listlabel">List Label</span>-->
+            </div>
+            <ul id="myUL">
+                <li>Hit the gym</li>
+                <li class="checked">Pay bills</li>
+                <li>Meet George</li>
+                <li>Buy eggs</li>
+                <li>Read a book</li>
+                <li>Organize office</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
