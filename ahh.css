@@ -4,6 +4,7 @@
   color: #FFFFFF;
   text-decoration: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 body,
 html {
