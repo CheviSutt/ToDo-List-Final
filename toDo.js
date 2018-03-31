@@ -1,4 +1,4 @@
-// Create a new list item when clicking the "Add" button
+// Create a new list item when clicking the "Add list" button W3
 function newElement() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("myInput").value;
@@ -25,27 +25,42 @@ function newElement() {
     }
 }
 
-/*let activeList; //from class
-
-function addItem(element){
-    activeList = $(this).parent().parent();
-    //open model
-}
-
-//this function is called when model save is pushed
-function saveTodoItem(theValue) {
-    $(activeList).find("todolist").append("<div>" + thevalue + "</div>")
-    ;
+//add empty div todolist
+/*function addList(){
+   let list = document.createElement("div");
+   document.getElementById("newList").append(listLabel);
 }*/
 
-//add empty div todolist
-function addList(){
-   let list = document.createElement("div");
-   document.getElementById("newList").appendChild(list);
+$(".bluebtn").click(function(event){
+    let myval = $("#myInput").val();
+    // if(event.which === 13){
+    $(".listContainer").append("<div class='todolist'>" + myval +
+            " <input id='" + myval + "' onclick='addtheItem(this, this.value, event)'placeholder='Add A Item' type='text'> <a class=\"OrgBtn\" onclick=\"addtheItem()\">Add Item</a><div class='itembox'></div></div>");
+        $('#myInput').val("");
+        // }
+
+});
+
+function addtheItem(incid, myvalue, event){
+    // if(event.keyCode === 13){
+        $(incid).parent().find(".itembox").append(" <div class=\"row\">\n" +
+            "<div class=\"rowleft\">\n" +
+            "<div class=\"iconspot fa\"></div>\n" +
+            "<div class=\"label\">" + myvalue +"</div>\n" +
+            "</div>\n" +
+            " <div class=\"rowright\">\n" +
+            "<button onclick=\"markComplete(this)\">Mark Complete</button>\n" +
+            "<div class=\"fa fa-trash\" onclick=\"removeRow(this)\"></div>\n" +
+            "</div></div>");
+        $(incid).val("");
+    // }
 }
-console.log("Hello" + " World");
 
+addtheItem()
 
+$(".OrgBtn").click(function(event) {
+
+})
 
 
 function markComplete(myelement){
