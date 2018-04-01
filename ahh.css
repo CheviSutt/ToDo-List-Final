@@ -4,16 +4,15 @@
   color: #FFFFFF;
   text-decoration: none;
   border-radius: 4px;
+  cursor: pointer;
 }
-
-.OrgBtn{
-     background-color: darkorange;
-     padding: 12px;
-     color: #FFFFFF;
-     text-decoration: none;
-     border-radius: 4px;
- }
-
+.OrgBtn {
+  background-color: darkorange;
+  padding: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 4px;
+}
 body,
 html {
   padding: 0;
@@ -67,13 +66,10 @@ body {
   display: flex;
   height: 45px;
   align-items: center;
-  justify-content: space-between;
 }
 .container .main .list .todolist .listlabel {
   padding-left: 20px;
 }
-
-
 .row {
   width: 80%;
   padding: 15px;
