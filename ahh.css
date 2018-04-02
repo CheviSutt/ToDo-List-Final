@@ -13,6 +13,7 @@
   text-decoration: none;
   border-radius: 4px;
 }
+
 body,
 html {
   padding: 0;
@@ -20,6 +21,7 @@ html {
   width: 100%;
   height: 100%;
 }
+
 body {
   background: linear-gradient(45deg, #7751fe 0%, #00a9ff 100%);
   display: flex;
@@ -27,12 +29,14 @@ body {
   align-items: center;
   font-family: 'open sans', sans-serif;
 }
+
 .container {
   width: 80%;
   height: 90%;
   background-color: #f4f8f9;
   border-radius: 4px;
 }
+
 .container .headbar {
   display: flex;
   justify-content: space-between;
@@ -42,30 +46,39 @@ body {
   align-items: center;
   border-top-left-radius: 4px;
 }
+
 .container .headbar .left {
   padding-left: 20px;
 }
+
 .container .headbar .right {
   padding-right: 20px;
 }
+
 .container .main {
   height: auto;
   margin: 25px auto;
   padding: 20px;
 }
+
 .container .main .header {
   display: flex;
   justify-content: space-between;
 }
+
 .container .main .list {
   margin-top: 30px;
 }
+
 .container .main .list .todolist {
   background-color: #FFFFFF;
   width: 100%;
   display: flex;
   height: 45px;
   align-items: center;
+  border: 1px solid dodgerblue;
+  justify-content: space-between;
+  padding-left: 20px;
 }
 .container .main .list .todolist .listlabel {
   padding-left: 20px;
@@ -73,7 +86,7 @@ body {
 .row {
   width: 80%;
   padding: 15px;
-  border: 1px solid #dadfea;
+  border: 2px solid orange;
   display: flex;
   justify-content: space-between;
   align-items: center;
