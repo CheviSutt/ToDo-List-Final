@@ -4,7 +4,7 @@ $(".bluebtn").click(function(event){
     let myval = $("#myInput").val();
     // if(event.which === 13){
     $(".listContainer").append("<div class='todolist'>" + myval +
-            " <input id='" + myval + "' onkeyup='addtheItem(this, this.value, event)'placeholder='Add Item Press Enter' type='text'><div><a class=\"OrgBtn\" onclick=\"testItem()\">Add Item</a><div class='itembox'></div></div>");
+            " <input id='" + myval + "' onkeyup='addtheItem(this, this.value, event)'placeholder='Add Item Press Enter' type='text'><div><a class=\"OrgBtn\" onclick=\"testItem()\">Remove list</a></div><div class='itembox'></div>");
         $('#myInput').val("");
         // }
 
@@ -15,7 +15,7 @@ function addtheItem(incid, myvalue, event){
         $(incid).parent().find(".itembox").append(" <div class=\"row\">\n" +
             "<div class=\"rowleft\">\n" +
             "<div class=\"iconspot fa\"></div>\n" +
-            "<div class=\"label\">" + myvalue +"</div>\n" +
+            "<div class=\"label\">" + myvalue + "</div>\n" +
             "</div>\n" +
             "<div class=\"rowright\">\n" +
             "<button onclick=\"markComplete(this)\">Mark Complete</button>\n" +
