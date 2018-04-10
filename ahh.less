@@ -1,5 +1,7 @@
 @my-blue: #00A9FF;
+
 @my-gradient: linear-gradient(45deg, rgba(119,81,254,1) 0%, rgb(0, 169, 255) 100%);
+
 .bluebtn{
   background-color: @my-blue;
   padding: 12px;
@@ -8,13 +10,16 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
 .OrgBtn{
   background-color: darkorange;
   padding: 10px;
   color: #FFFFFF;
   text-decoration: none;
   border-radius: 4px;
+  cursor: pointer;
 }
+
 body, html {
   padding: 0;
   margin: 0;
@@ -43,31 +48,33 @@ body {
     width: 100%;
     height: 50px;
     align-items: center;
-    border-top-left-radius: 4px;
+    border-radius: 4px;
 
-    .left {
+    .headerLeft {
       padding-left: 20px;
     }
-    .right {
+    .headerRight {
       padding-right: 20px;
     }
   }
 
   .main{
-
     height: auto;
     margin: 25px auto;
     padding: 20px;
 
-    .header {
+    .taskHeaderInput {
       display: flex;
       justify-content: space-between;
     }
 
-    .list {
+    .todolistHeaderContainer {
       margin-top: 30px;
+      // border: 1px solid black;
+      height: auto;
+      width: 100%;
 
-      .todolist{
+      .todolistHeader {
         background-color: #FFFFFF;
         width: 100%;
         display: flex;
@@ -77,17 +84,16 @@ body {
         justify-content: space-evenly;
 
         .listlabel {
+          // border: 1px solid black;
           display: flex;
           justify-content: center;
-          padding-left: 20px;
-
+          align-items: center;
         }
       }
     }
   }
 
 }
-
 
 
 .row {
@@ -99,10 +105,12 @@ body {
   align-items: center;
   margin-bottom: 5px;
   position: relative;
+  border-radius: 4px;
 }
 
 .rowleft {
   display: flex;
+  margin-left: 15%;
 }
 
 .iconspot {
@@ -111,8 +119,8 @@ body {
 }
 
 .complete {
-  color: green;
-  border-color: green;
+  color: mediumvioletred;
+  border-color: mediumvioletred;
 }
 
 .fa-trash {
@@ -121,7 +129,6 @@ body {
 }
 
 ul li {
-
   color: #00A9FF;
   cursor: pointer;
   position: relative;
@@ -180,3 +187,51 @@ ul li.checked::before {
   background-color: #f44336;
   color: white;
 }
+
+
+// This is the CSS that I have added...
+
+.listContainer{
+  width: 100%;
+  height: 470px;
+  overflow: scroll;
+  border: 1px solid dodgerblue;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+// ^^^I made the ListContainer overflow scroll, and this makes the scrollbar disappear.
+
+.todolist{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+   //border: 1px solid dodgerblue;
+}
+// ^^This is the todolist that is being appended to listContainer. I made the height auto so that it will expand as things get added.
+
+.listHeaderAddTasks{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid dodgerblue;
+  margin-top: 2px;
+}
+// I created 2 new divs inside the Header that gets added, I used dislpay flex and flex direction column so they are stacked on top of eachother.
+
+.taskBox{
+  width: 100%;
+  height: auto;
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+}
+// ^^This is the div where the tasks are going to get appended. It was named itembox, but I renamed it. I did height auto again.
